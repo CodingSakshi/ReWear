@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("include/head", { title: 'Add Clothing Item' }) %>
+    <link href="/styles/report.css" rel="stylesheet">
+</head>
+<body>
+    <%- include("include/nav") %>
+
+    <div class="main-container">
+        <div class="report-form">
+                <form action="/report" method="POST" enctype="multipart/form-data">
+
+                <section class="report-section">
+                    <h2>Add a Clothing Item</h2>
+                    <p class="description">Please provide details about the clothing item you want to swap or redeem.</p>
+
+                    <div class="form-group">
+                        <label for="title">Title<span class="required">*</span></label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description<span class="required">*</span></label>
+                        <textarea id="description" name="description" rows="3" placeholder="Describe the item – brand, fabric, color, etc. And tags." required></textarea>
+                    </div>
+
+                    <fieldset>
+                        <p class="question-label">Category<span class="required">*</span></p>
+                        <div class="radio-group">
+                            <input type="radio" name="category" value="Dress" id="dress" required> 
+                            <label for="dress">Dress</label> 
+                    
+                            <input type="radio" name="category" value="Tops&Blouses" id="tops&blouses" required> 
+                            <label for="tops&blouses">Tops&Blouses</label> 
+
+                            <input type="radio" name="category" value="Bottom" id="bottom" required> 
+                            <label for="bottom">Bottom</label> 
+
+                            <input type="radio" name="category" value="Jwellery" id="Jwellery" required> 
+                            <label for="jwellery">Jwellery</label>
+
+                            <input type="radio" name="category" value="Bags" id="bags" required> 
+                            <label for="bags">Bags</label>
+                        </div>
+                    </fieldset>
+
+
+
+
+
+
+
+                    <fieldset>
+                        <p class="question-label">Size<span class="required">*</span></p>
+                        <div class="radio-group">
+                            <input type="radio" name="size" value="XS" id="xs" required> 
+                            <label for="xs">XS</label> 
+                    
+                            <input type="radio" name="size" value="S" id="s" required> 
+                            <label for="s">S</label> 
+
+                            <input type="radio" name="size" value="M" id="m" required> 
+                            <label for="m">M</label> 
+
+                            <input type="radio" name="size" value="L" id="l" required> 
+                            <label for="l">L</label> 
+
+                            <input type="radio" name="size" value="XL" id="xl" required> 
+                            <label for="xl">XL</label> 
+                        </div>
+                    </fieldset>
+
+
+
+
+                    <fieldset>
+                        <p class="question-label">Condition<span class="required">*</span></p>
+                        <div class="radio-group">
+                            <input type="radio" name="condition" value="New" id="new" required> 
+                            <label for="new">New</label> 
+                    
+                            <input type="radio" name="condition" value="Gently Used" id="gentlyused" required> 
+                            <label for="gentlyused">Gently Used</label> 
+
+                            <input type="radio" name="condition" value="Used" id="used" required> 
+                            <label for="used">Used</label> 
+
+			            </div>
+                    </fieldset>
+
+
+
+
+
+
+                    <div class="form-group">
+                        <label for="image">Upload Image of Clothing Item<span class="required">*</span></label>
+                        <input type="file" id="image" name="image" accept="image/*" required>
+                    </div>
+                </section>
+
+                <section class="report-section">
+                    <button type="submit" id="submitButton">Submit Clothing Item</button>
+                </section>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

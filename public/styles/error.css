@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    font-family: 'lexend deca', sans-serif;
+}
+
+.error-container {
+    padding: 40px;
+}
+
+.error-container h1 {
+    color: #fa6742; 
+    margin-bottom: 8px;
+    font-size: 100px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+.error-container h3 {
+    color: #2e475d;
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+.error-container p {
+    color: #6e7a8a; 
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+

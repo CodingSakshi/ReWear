@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    /* font-family: "Roboto", sans-serif; */
+    /* background-color: var(--bg-color); */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+/* header {
+    position: relative;
+} */
+
+
+
+.signup-section {
+    /* background-color: var(--bg-color); */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.signup-form {
+    max-width: 520px; /* Increased width by 20px */
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px 30px; /* Increased padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+.signup-form h2 {
+    font-family: inherit;
+    color: #fa6742; ;
+    margin-bottom: 20px;
+}
+
+.form-group, fieldset {
+    margin-bottom: 15px;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 5px;
+    color: var(--p-color);
+    text-align: left;
+    font-size: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.submit-button {
+    background-color: #fa6742;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font: inherit;
+}
+
+.submit-button:hover {
+    background-color: #f45730;
+}
+
+/* .or-divider {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #6e7a8a;
+} */
+
+p {
+    color: #6e7a8a;
+    margin-top: 20px;
+}
+
+a {
+    color: #fa6742;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.pass-warning, .username-warning {
+    color: rgb(150, 0, 0); /* Set the text color to red */
+    font-size: 14px;
+    text-align: left;
+    /* display: none; */
+    margin: 2px 0 5px 0;
+
+}
+
+input {
+    color: var(--p-color-from);
+    font-family: inherit;
+}
+
+input:focus, textarea:focus{
+    border: 1px solid var(--org-color); /* Customize the border on focus */
+    outline: none; /* Remove the default outline */
+}
+
+textarea {
+    margin: 0;
+    font: inherit;
+    font-size: 14px;
+}
+
+/* 
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+    margin-right: 1px;
+} */
+
+.question-label {
+    display: block;
+    margin: 0;
+    margin-bottom: 5px;
+    color: var(--p-color);
+    text-align: left;
+    font-size: 15px;
+}
+
+fieldset {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+}
+
+.radio-group, .checkbox{
+    float: left;
+    clear: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.radio-group label, .checkbox label {
+    float: left;
+    clear: none;
+    display: block;
+    padding: 0px 1em 0px 8px;
+
+    margin-bottom: 12px;
+    color: #52565b;
+    font-size: 15px;
+  }
+  
+  input[type="radio"],
+  input.radio, input[type="checkbox"], input.checkbox {
+    float: left;
+    clear: none;
+    margin: 2px 0 0 2px;
+  }
+
+  /* Style for the file input */
+.form-group input[type="file"] {
+    width: 100%;             /* Full width to match other inputs */
+    padding: 10px;           /* Padding for spacing */
+    border: 1px solid #ccc;  /* Same border as text inputs */
+    border-radius: 5px;      /* Rounded corners like other inputs */
+    box-sizing: border-box;  /* Include padding in the element's width/height */
+    color: var(--p-color);   /* Text color to match other inputs */
+    font-family: inherit;    /* Inherit font family for consistency */
+    background-color: white; /* Background color for file input */
+}
+
+
+
+/* Optional: Hide the default file input style and customize it */
+input[type="file"]::file-selector-button {
+    background-color: #fa6742;
+    color: #fff;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+    margin-right: 8px;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #f45730; /* Change background on hover */
+}
+
+
+
+
+
+
+
