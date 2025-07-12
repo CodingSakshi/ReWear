@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("include/head", { title: 'Safe Returns' }) %>
+    
+    <link href="/styles/styles.css" rel="stylesheet">
+</head>
+<body>
+    <%- include("include/nav") %>
+
+    <div class="hero">
+        <img class="hero-img" src="/images/categories/fashion-hero.jpg">
+        <div class="hero-content">
+            <h1>SwapNStyle</h1>
+            <h3>Refresh Your Wardrobe Sustainably</h3>
+            <p>SwapNStyle makes it easy to exchange clothing items with others in your community. Give your pre-loved clothes a new life while discovering unique pieces for your wardrobe - all without spending money!</p>
+
+            <% if (isAuthenticated) { %>
+                <a href="/explore">Get Started ></a>
+            <% } else { %>
+                <a href="/signup" class="">Get Started ></a>
+            <% } %>
+    
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="custom-hr"></div>
+
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img class="logo-img" src="/favicon/logo.png">
+                <p></p>
+            </div>
+            <div class="footer-links">
+                <h3>COMPANY</h3>
+                <ul>
+                    <li><a href="/">About Us</a></li>
+                    <li><a href="/">Technologies</a></li>
+                    <li><a href="/">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>RESOURCES</h3>
+                <ul>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="/">Documentation</a></li>
+                    <li><a href="/">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>LEGAL</h3>
+                <ul>
+                    <li><a href="/">Terms of Service</a></li>
+                    <li><a href="/">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwapNStyle. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

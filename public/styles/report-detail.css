@@ -1,0 +1,164 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lexend Deca", 'Arial', sans-serif;
+    background-color: #e4f1ff;
+}
+
+/* Main Section Style */
+.section {
+    max-width: 900px; /* Increased width for more space */
+    margin: 20px auto;
+    padding: 40px; /* Increased padding */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Header Styles */
+h1 {
+    color: #fa6742; 
+    margin-bottom: 15px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Card Styles */
+.card {
+    /* background: #f9f9f9;  */
+    border-radius: 8px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    margin-bottom: 0px;
+    position: relative; /* Position for absolute elements */
+}
+
+/* Subheader Styles */
+h3 {
+    color: #2e475d;
+    margin-bottom: 15px;
+    font-size: 20px; /* Increased font size for clarity */
+    border-bottom: 0.1px solid #dcdcdc;
+    padding-bottom: 5px;
+}
+
+/* Paragraph and List Styles */
+p {
+    color: #6e7a8a; 
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* Lightweight font style for less important text */
+.lightweight {
+    font-size: 14px; /* Smaller font size */
+    color: #aaa; /* Lighter color for subtlety */
+    position: absolute; /* Positioning at top corner */
+    top: 25px; 
+    right: 20px; 
+}
+
+/* Image Styles */
+.report-image {
+    height: 150px;
+    width: auto;
+    border-radius: 8px;
+    margin: 0 10px 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.additional-details {
+    margin-bottom: 20px;
+}
+
+/* Matched With Styles */
+.matched-with strong  {
+    color: #fa6742;
+}
+
+#btns {
+    display: flex;
+    justify-content: center;
+}
+
+/* Button Styles */
+#back-button, #download-button {
+    display: inline-block; 
+    margin-top: 30px; 
+    margin: 0 10px;
+    padding: 10px 20px; 
+    background-color: #fa6742; 
+    color: #fff; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s;
+}
+
+#back-button:hover, #download-button:hover {
+    background-color: #e65c3c; /* Darker shade on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .lightweight {
+        font-size: 12px; /* Adjust for smaller screens */
+    }
+}
+
+
+/* Precaution Message Styles */
+.precaution {
+    margin-top: 15px;
+    font-size: 14px; /* Adjust font size */
+    color: #555; /* Slightly darker color for visibility */
+    background-color: #f9f9f9; /* Light background to distinguish it */
+    padding: 10px; /* Padding around the text */
+    border-left: 4px solid #fa6742; /* A colored left border for emphasis */
+    border-radius: 5px; /* Rounded corners */
+}
+
+
+.matched-with a {
+    color: #2e475d;
+    font-family: "Lexend Deca", sans-serif;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 1px;
+    font-size: 15px;
+  }
+  
+  .matched-with a:hover {
+      text-decoration: underline;
+  }
+
+
+

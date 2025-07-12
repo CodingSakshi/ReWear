@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("include/head", {title: category + ' - SwapNStyle'}) %>
+    <link href="/styles/category.css" rel="stylesheet">
+</head>
+<body>
+    <%- include("include/nav") %>
+
+    <main class="category-container">
+        <h1><%= category %></h1>
+        
+        <% if(!items || items.length === 0) { %>
+            <div class="empty-category">
+                <p>No <%= category.toLowerCase() %> items available yet.</p>
+                <a href="/report" class="btn">Be the first to add one!</a>
+            </div>
+        <% } else { %>
+            <div class="items-grid">
+                <% for(const item of items) { %>
+                    <a href="/item/<%= item._id %>" class="item-image-link">
+                    <div class="item-card">
+                        <div class="item-image">
+                            <img src="<%= item.imagePath %>" alt="<%= item.title %>">
+                       
+                            <span class="item-status <%= item.isSwapped ? 'unavailable' : 'available' %>">
+        <%= item.isSwapped ? 'Unavailable' : 'Available' %>
+    </span>
+                        </div>
+                        <div class="item-details">
+                            <h2><%= item.title %></h2>
+                            <div class="item-meta">
+                                <span class="item-size"><%= item.size %></span>
+                                <span class="item-condition"><%= item.condition %></span>
+                            </div>
+                            <p class="item-description"><%= item.description %></p>
+                            
+                           <div class="item-owner">
+  <span>Posted by:</span>
+  <a href="/account/%>" class="owner-link"> 
+    <%= item.owner.fullname || item.owner.username %>
+  </a>
+</div>
+
+                            
+<div class="item-actions">
+    <% if(!item.isSwapped) { %>
+        <div class="action-buttons">
+            <a href="/swap-request/<%= item._id %>" class="btn swap-btn">
+                <i class="fas fa-exchange-alt"></i> Swap
+            </a>
+            <a href="/redeem/<%= item._id %>" class="btn redeem-btn">
+                <i class="fas fa-coins"></i> Redeem
+            </a>
+        </div>
+    <% } else { %>
+        <button class="btn unavailable-btn" disabled>
+            <i class="fas fa-lock"></i> Item Unavailable
+        </button>
+    <% } %>
+</div>
+                        </div>
+                    </div>
+                    </a>
+                <% } %>
+            </div>
+        <% } %>
+    </main>
+</body>
+</html>

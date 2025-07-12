@@ -1,0 +1,23 @@
+<article class="report-item">
+  <p><strong>Full Name:</strong> <%= report.fullname %></p>
+  <p><strong>Status:</strong> <%= report.personStatus %></p>
+    
+  <p class="matched-with">
+    <strong>Matched With:</strong> 
+    <% if (report.matchedWith) { %>
+        <a href="<%= report.matchedWith %>" target="_blank" class="matched-with">View Matched Profile</a>
+        <% } else { %>
+        No matched found for now
+    <% } %>
+</p>
+
+
+    
+    <div class="report-actions">
+      <form action="/report/<%= report._id %>/delete" method="report">
+        <button class="btn btn-alt">Delete report</button>
+      </form>
+      <a href="/report-detail/<%= report._id %>/edit">Edit report</a>
+      <a class="btn" href="/account/report/<%= report._id %>">View report</a>
+    </div>
+  </article>

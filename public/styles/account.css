@@ -1,0 +1,189 @@
+/* All items page */
+html {
+    font-family: 'Lexend Deca', serif;
+}
+  
+body {
+    margin: 0;
+    background-color: #E4F1FF;
+}
+
+#user-info-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px 0;
+}
+
+#user-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #5f7087;
+    padding: 0;
+}
+
+#user-info h3 {
+    margin: 0 20px;
+    font-size: 16px;
+}
+  
+main {
+    width: 55%;
+    margin: 3rem auto;
+    margin-top: 10px;
+}
+
+#all-items {
+    text-align: center;
+}
+
+#all-items h1 {
+    font-size: 22px;
+    color: #fa6742;
+    margin-bottom: 10px;
+}
+  
+#items-list {
+    margin: 3rem auto;
+    max-width: 40rem;
+    padding: 0;
+}
+  
+.clothing-item {
+    margin: 1rem 0;
+    border: 0.1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: flex;
+    text-align: left;
+}
+
+.clothing-item.swapped {
+    opacity: 0.7;
+    background-color: #f9f9f9;
+}
+
+.item-image {
+    width: 120px;
+    height: 120px;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h2 {
+    margin: 0.5rem 0;
+    color: #2e475d;
+    font-size: 23px;
+}
+
+.item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.item-meta span {
+    padding: 0.2rem 0.5rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #5f7087;
+}
+
+.item-type.swap {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.item-type.redeem {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+.item-description {
+    margin: 0.5rem 0;
+    color: #6e7a8a;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.item-status {
+    margin-top: 0.8rem;
+    font-size: 15px;
+    color: #5f7087;
+}
+
+.swapped-status {
+    color: #6e7a8a;
+}
+
+.swap-partner {
+    color: #2e475d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.swap-partner:hover {
+    color: #fa6742;
+}
+
+.available-status {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#no-items {
+    margin-top: 30px;
+}
+
+/* Button styles */
+.btn {
+    cursor: pointer;
+    font: inherit;
+    background-color: #fa6742;
+    text-decoration: none;
+    border: none;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    font-size: 14px;
+}
+  
+.btn:hover,
+.btn:active {
+    background-color: #f45730;
+    text-decoration: none;
+    border-color: none;
+    color: white;
+}
+  
+.btn.btn-alt {
+    background-color: transparent; 
+    border-color: transparent;
+    color: #fa6742;
+    padding: 0;
+}
+  
+.btn.btn-alt:hover,
+.btn.btn-alt:active {
+    text-decoration: underline;
+}

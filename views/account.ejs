@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("include/head", { title: 'My Closet' }) %>
+    <link href="/styles/account.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include("include/nav") %>
+
+    <div id="user-info-wrapper">
+        <div id="user-info"> 
+            <h3>Username: <strong><%= user.username %></strong></h3>
+            <h3>Name: <strong><%= user.fullname %></strong></h3>
+        </div>
+    </div>
+
+    <main id="all-items">
+        <% if (!items || items.length === 0) { %>
+            <div id="no-items">
+                <h1>Your closet is empty!</h1>
+                <p>Start by adding your first clothing item</p>
+                <a class="btn" href="/report">Add Clothing Item</a>
+            </div>
+        <% } else { %>
+            <h1>Your Clothing Items</h1>
+            <ol id="items-list"> 
+                <% for (const item of items) { %>
+                    <li class="clothing-item <%= item.isSwapped ? 'swapped' : '' %>">
+                        <div class="item-image">
+                            <img src="<%= item.imagePath %>" alt="<%= item.title %>">
+                        </div>
+                        <div class="item-details">
+                            <h2><%= item.title %></h2>
+                            <div class="item-meta">
+                                <span class="item-category"><%= item.category %></span>
+                                <span class="item-size"><%= item.size %></span>
+                                <span class="item-condition"><%= item.condition %></span>
+
+                                <% if (item.type) { %>
+                                    <span class="item-type <%= item.type.toLowerCase() %>">
+                                        <%= item.type %>
+                                    </span>
+                                <% } %>
+                            </div>
+                            <p class="item-description"><%= item.description %></p>
+
+                            <% if (item.isSwapped) { %>
+                                <div class="item-status swapped-status">
+                                    <span>Swapped with</span>
+                                    <% if (item.swappedWithUser) { %>
+                                        <a href="/user/<%= item.swappedWithUser.username %>" class="swap-partner">
+                                            <%= item.swappedWithUser.username %>
+                                        </a>
+                                    <% } else { %>
+                                        <span>Unknown user</span>
+                                    <% } %>
+                                </div>
+                            <% } else { %>
+                                <div class="item-status available-status">
+                                    <span>Available for redemption</span>
+                                </div>
+                            <% } %>
+                        </div>
+                    </li>
+                <% } %>
+            </ol>
+        <% } %>
+    </main>
+</body>
+</html>

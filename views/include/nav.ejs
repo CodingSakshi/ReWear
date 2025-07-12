@@ -1,0 +1,47 @@
+<header>
+    <div class="logo">
+        <img class="logo-img" src="/favicon/logo.png">
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+
+        <% if (isAuthenticated) { %>
+            <a href="/report">Post Item</a>
+            <a href="/explore">Explore</a>
+            <a href="/account/<%= user.username %>">Account</a>
+            <form action="/logout" method="POST">
+                <button>Logout</button>
+            </form>
+        <% } else { %>
+            <a href="/login">Login</a>
+        <% } %>
+    
+    </nav>
+
+    <!-- Hamburger Icon for smaller screens -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Dropdown menu for mobile navigation -->
+    <div class="nav-dropdown" id="navDropdown">
+        <a href="/">Home</a>
+
+        <% if (isAuthenticated) { %>
+            <a href="/report">Post Item</a>
+        <a href="/explore">Explore</a>
+
+            <a href="/account/<%= user.username %>">Account</a>
+        <form action="/logout" method="POST">
+                <button>Logout</button>
+            </form>
+
+        <% } else { %>
+            <a href="/login">Login</a>
+        <% } %>
+      
+    </div>
+</header>

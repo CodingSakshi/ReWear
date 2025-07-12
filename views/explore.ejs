@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("include/head", {title: 'Explore Clothing'}) %>
+    <link href="/styles/explore.css" rel="stylesheet">
+</head>
+<body>
+    <%- include("include/nav") %>
+
+    <main class="explore-container">
+        <h1>Explore Categories</h1>
+        
+        <div class="categories-grid">
+            <!-- Dress Category -->
+            <a href="/explore/dresses" class="category-card">
+                <div class="category-image">
+                    <img src="/images/categories/dresses.jpg" alt="Dresses">
+                </div>
+                <div class="category-info">
+                    <h2>Dresses</h2>
+                    <p>Find beautiful dresses for every occasion</p>
+                </div>
+            </a>
+
+            <!-- Tops & Blouses Category -->
+            <a href="/explore/tops-blouses" class="category-card">
+                <div class="category-image">
+                    <img src="/images/categories/tops-blouses.jpg" alt="Tops & Blouses">
+                </div>
+                <div class="category-info">
+                    <h2>Tops & Blouses</h2>
+                    <p>Stylish tops for your perfect look</p>
+                </div>
+            </a>
+
+            <!-- Bottoms Category -->
+            <a href="/explore/bottoms" class="category-card">
+                <div class="category-image">
+                    <img src="/images/categories/bottoms.jpg" alt="Bottoms">
+                </div>
+                <div class="category-info">
+                    <h2>Bottoms</h2>
+                    <p>Comfortable and trendy bottoms</p>
+                </div>
+            </a>
+
+            <!-- Jewelry Category -->
+            <a href="/explore/jewelry" class="category-card">
+                <div class="category-image">
+                    <img src="/images/categories/jewelry.jpg" alt="Jewelry">
+                </div>
+                <div class="category-info">
+                    <h2>Jewelry</h2>
+                    <p>Accessorize with beautiful pieces</p>
+                </div>
+            </a>
+
+            <!-- Bags Category -->
+            <a href="/explore/bags" class="category-card">
+                <div class="category-image">
+                    <img src="/images/categories/bags.jpg" alt="Bags">
+                </div>
+                <div class="category-info">
+                    <h2>Bags</h2>
+                    <p>Complete your outfit with the perfect bag</p>
+                </div>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

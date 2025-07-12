@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("include/head", {title: item.title + ' - SwapNStyle'}) %>
+    <link href="/styles/item-detail.css" rel="stylesheet">
+</head>
+<body>
+    <%- include("include/nav") %>
+
+    <main class="item-detail-container">
+        <div class="item-gallery">
+            <div class="main-image">
+                <img src="<%= item.imagePath %>" alt="<%= item.title %>">
+                <div class="item-status <%= item.isSwapped ? 'unavailable' : 'available' %>">
+                    <%= item.isSwapped ? 'Unavailable' : 'Available' %>
+                </div>
+            </div>
+        </div>
+
+        <div class="item-info">
+            <h1><%= item.title %></h1>
+            
+            <div class="item-meta">
+                <div class="meta-group">
+                    <span class="meta-label">Category:</span>
+                    <span class="meta-value"><%= item.category %></span>
+                </div>
+                <div class="meta-group">
+                    <span class="meta-label">Size:</span>
+                    <span class="meta-value"><%= item.size %></span>
+                </div>
+                <div class="meta-group">
+                    <span class="meta-label">Condition:</span>
+                    <span class="meta-value"><%= item.condition %></span>
+                </div>
+                <div class="meta-group">
+                    <span class="meta-label">Posted:</span>
+                    <span class="meta-value"><%= new Date(item.postedAt).toLocaleDateString() %></span>
+                </div>
+            </div>
+
+            <div class="item-description">
+                <h3>Description</h3>
+                <p><%= item.description %></p>
+            </div>
+
+            <div class="item-owner">
+                <h3>Owner</h3>
+                <div class="owner-card">
+                    <div class="owner-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="owner-details">
+                        <a href="/account/<%= item.owner.username %>" class="owner-name">
+                            <%= item.owner.fullname || item.owner.username %>
+                        </a>
+                        <span class="owner-since">
+                            Member since <%= new Date(item.owner.userSince).toLocaleDateString() %>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <% if(!item.isSwapped && !isOwner) { %>
+                <div class="action-buttons">
+                    <a href="/swap-request/<%= item._id %>" class="btn swap-btn">
+                        <i class="fas fa-exchange-alt"></i> Request Swap
+                    </a>
+                   <!-- TODO: add redeem functionality -->
+                </div>
+            <% } else if(isOwner) { %>
+                <div class="owner-actions">
+                    <button class="btn edit-btn">
+                        <i class="fas fa-edit"></i> Edit Item
+                    </button>
+                    <!-- TODO: add edit functionality -->
+                </div>
+            <% } else { %>
+                <button class="btn unavailable-btn" disabled>
+                    <i class="fas fa-lock"></i> Item Unavailable
+                </button>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>
